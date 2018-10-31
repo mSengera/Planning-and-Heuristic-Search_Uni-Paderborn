@@ -4,7 +4,7 @@ from Node import Node
 """
 Get a solution path from an starting board configuration s, to a goal node.
 """
-def DFS(s, goal_node, k):
+def BFS(s, goal_node, k):
     OPEN = []
     CLOSED = []
 
@@ -53,7 +53,7 @@ target_board_configuration = \
 g = target_board_configuration
 
 
-solution_node = DFS(s, g, 5)
+solution_node = BFS(s, g, 5)
 
 # Further computation from solution_path. With backpointer, reconstruct the solution path
 print(solution_node.getBackpointer())

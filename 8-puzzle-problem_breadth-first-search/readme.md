@@ -1,5 +1,5 @@
 # Solving the 8-puzzles problem
-Solving the 8-puzzles problem with depth first search, an graph algorithm.
+Solving the 8-puzzles problem with breadth first search, an graph algorithm.
 
 ## The 8-puzzles problem
 "The 8-puzzle is a smaller version of the slightly better known 15-puzzle. The puzzle consists of an area divided into a
@@ -12,10 +12,10 @@ individual tiles around the grid as described above."
 - Reference: http://www.aiai.ed.ac.uk/~gwickler/eightpuzzle-inf.html
 
 ## Solving the problem with grapgh algorithm
-I solved the problem with an graph algorithm, the depth first search. The algorithm is programmed in python.
+I solved the problem with an graph algorithm, the breadth first search. The algorithm is programmed in python.
 
 ## Inputs
-Inputs for the DFS() function
+Inputs for the BFS() function
 
 - A starting Node 's' as an instance of 'Node"
 
@@ -30,4 +30,4 @@ target_board_configuration = \
 - An integer as "depth-bound". (Maximum depth to search)
 
 ### Usage
-DFS(s, target_board_configuration, depth_bound)
+BFS(s, target_board_configuration, depth_bound)
