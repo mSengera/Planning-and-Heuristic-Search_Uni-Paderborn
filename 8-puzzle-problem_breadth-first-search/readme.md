@@ -1,3 +1,5 @@
+[![Functional?](https://img.shields.io/badge/Functional%3F-yes-green.svg)](https://shields.io/)
+
 # Solving the 8-puzzles problem
 Solving the 8-puzzles problem with breadth first search, an graph algorithm.
 
