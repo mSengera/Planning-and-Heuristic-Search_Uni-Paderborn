@@ -13,10 +13,10 @@ The aim of the puzzle is to achieve a given configuration of tiles from a given 
 individual tiles around the grid as described above."
 - Reference: http://www.aiai.ed.ac.uk/~gwickler/eightpuzzle-inf.html
 
-## Solving the problem with grapgh algorithm
+### Solving the problem with grapgh algorithm
 I solved the problem with an graph algorithm, the best first search. The algorithm is programmed in python.
 
-### Solving the problem with heuristics
+## Solving the problem with heuristics
 We assume following heuristics:
 
 - h1(n) = number ob misplaced tiles
