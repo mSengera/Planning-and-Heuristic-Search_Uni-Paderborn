@@ -36,6 +36,7 @@ Get most promising solution base from OPEN
 def _min(OPEN):
     bestnode = []
     val = 9999999999
+    arr = False
 
     for index, node in enumerate(OPEN):
         if node.getFval() < val:
