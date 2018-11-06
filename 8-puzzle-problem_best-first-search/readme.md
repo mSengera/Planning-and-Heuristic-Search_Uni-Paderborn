@@ -16,8 +16,8 @@ individual tiles around the grid as described above."
 ## Solving the problem with grapgh algorithm
 I solved the problem with an graph algorithm, the best first search. The algorithm is programmed in python.
 
-## Solving the problem with heuristics
-We can assume following heuristics:
+### Solving the problem with heuristics
+We assume following heuristics:
 
 - h1(n) = number ob misplaced tiles
 - h2(n) = sum of manhatten distances of misplaced tiles

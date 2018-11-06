@@ -8,11 +8,13 @@ class Node:
     nullPosition = []
     backpointer = ""
     depth = -1
+    fVal = -1
 
     def __init__(self, boardConfiguration, nullPointer, depth):
         self.setBoardConfiguration(boardConfiguration)
         self.setNullPosition(nullPointer)
         self.setDepth(depth)
+        self.f()
 
     def successors(self):
         successors = []
@@ -76,6 +78,14 @@ class Node:
         return successors
 
     """
+    Compute the f(n) function
+    """
+    def f(self):
+
+
+        self.setFval(0)
+
+    """
     Getter and Setter Methods
     """
     def setBoardConfiguration(self, boardConfiguration):
@@ -101,3 +111,9 @@ class Node:
 
     def getDepth(self):
         return self.depth
+
+    def setFval(self, fVal):
+        self.fVal = fVal
+
+    def getFval(self):
+        return self.fVal
