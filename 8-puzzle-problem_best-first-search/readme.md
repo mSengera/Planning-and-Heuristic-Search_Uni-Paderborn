@@ -1,4 +1,4 @@
-[![Functional?](https://img.shields.io/badge/Functional%3F-no-red.svg)](https://shields.io/)
+[![Functional?](https://img.shields.io/badge/Functional%3F-yes-green.svg)](https://shields.io/)
 
 # Solving the 8-puzzles problem
 Solving the 8-puzzles problem with best first search, an graph algorithm.
