@@ -1,5 +1,38 @@
+import sys
+
 # Import Node class
 from Node import Node
+
+"""
+Get most promising solution base from OPEN
+"""
+def _min(OPEN):
+    bestnode = []
+    val = sys.maxsize
+    arr = False
+
+    for index, node in enumerate(OPEN):
+        if node.getFval() < val:
+            bestnode = [[node, index]]
+            val = node.getFval()
+            arr = False
+        elif node.getFval() == val:
+            bestnode.append([node, index])
+            arr = True
+
+        # Check if more than one best solution base is available
+        if arr:
+            besth1 = sys.maxsize
+            _bestnode = []
+
+            for node in bestnode:
+                if node[0].h1 <= besth1:
+                    _bestnode = [node]
+                    besth1 = node[0].h1
+
+            bestnode = _bestnode
+
+    return bestnode[0]
 
 """
 Get a solution path from an starting board configuration s, to a goal node.
@@ -29,36 +62,6 @@ def BF(s, goal_node):
             OPEN.append(successor)
 
     return False
-
-"""
-Get most promising solution base from OPEN
-"""
-def _min(OPEN):
-    bestnode = []
-    val = 9999999999
-    arr = False
-
-    for index, node in enumerate(OPEN):
-        if node.getFval() < val:
-            bestnode = [[node, index]]
-            val = node.getFval()
-            arr = False
-        elif node.getFval() == val:
-            bestnode.append([node, index])
-            arr = True
-
-        if arr:
-            besth1 = 9999999999
-            _bestnode = []
-
-            for node in bestnode:
-                if node[0].h1 <= besth1:
-                    _bestnode = [node]
-                    besth1 = node[0].h1
-
-            bestnode = _bestnode
-
-    return bestnode[0]
 
 """
 Main Programm
