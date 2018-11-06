@@ -16,6 +16,29 @@ individual tiles around the grid as described above."
 ## Solving the problem with grapgh algorithm
 I solved the problem with an graph algorithm, the best first search. The algorithm is programmed in python.
 
+## Solving the problem with heuristics
+We can assume following heuristics:
+
+- h1(n) = number ob misplaced tiles
+- h2(n) = sum of manhatten distances of misplaced tiles
+
+I solved the problem with the h1(n).
+
+Further we introduce a new function, to detect the optimal next solution base to continue. 
+
+f(n) = Estimate of optimum cost of solution paths for S that extend the backpointer path of n.
+
+f(n) = length of backpointer path of n + h1(n)
+
+(You can do the same with h2(n))
+
+### Tie breaking
+If two or more Nodes in OPEN has the same f(n) value, a tie breaking must decide which node next:
+
+- Go for goal nodes first (Solution found)
+- Go for nodes width min h1(n) values
+- Latest generated node first
+
 ## Inputs
 Inputs for the BF() function
 
