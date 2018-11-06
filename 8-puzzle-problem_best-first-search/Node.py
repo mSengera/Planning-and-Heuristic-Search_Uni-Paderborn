@@ -57,7 +57,7 @@ class Node:
             successor_node[zero_point[0]][zero_point[1]] = node[zero_point[0]][changed_zero_x]
             successor_node[zero_point[0]][changed_zero_x] = 0
 
-            new_node = Node(successor_node, [changed_zero_y, zero_point[1]], depth)
+            new_node = Node(successor_node, [changed_zero_x, zero_point[1]], depth)
             new_node.setBackpointer(self)
 
             successors.append(new_node)
@@ -70,7 +70,7 @@ class Node:
             successor_node[zero_point[0]][zero_point[1]] = node[zero_point[0]][changed_zero_x]
             successor_node[zero_point[0]][changed_zero_x] = 0
 
-            new_node = Node(successor_node, [changed_zero_y, zero_point[1]], depth)
+            new_node = Node(successor_node, [changed_zero_x, zero_point[1]], depth)
             new_node.setBackpointer(self)
 
             successors.append(new_node)

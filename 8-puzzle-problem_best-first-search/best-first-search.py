@@ -37,7 +37,7 @@ def _min(OPEN):
     bestnode = []
     val = 9999999999
 
-    for index, node in OPEN:
+    for index, node in enumerate(OPEN):
         if node.getFval() < val:
             bestnode = [node, index]
             val = node.getFval()
@@ -56,7 +56,7 @@ starting_board_configuration = \
             [6, 8, 5]
         ]
 
-s = Node(starting_board_configuration, [1, 0], 0)
+s = Node(starting_board_configuration, [1, 1], 0)
 
 # target board configuration
 target_board_configuration = \
