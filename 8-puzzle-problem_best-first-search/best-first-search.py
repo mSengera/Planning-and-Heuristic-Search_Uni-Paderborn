@@ -15,7 +15,9 @@ def BF(s, goal_node):
         return False
 
     while OPEN:
-        n = _min(OPEN)
+        bestnode = _min(OPEN)
+        n = bestnode[0]
+        del OPEN[bestnode[1]]
 
         CLOSED.append(n)
 
@@ -23,6 +25,7 @@ def BF(s, goal_node):
             if successor.getBoardConfiguration() == goal_node:
                 return successor
 
+            successor.f(goal_node)
             OPEN.append(successor)
 
     return False
@@ -31,12 +34,12 @@ def BF(s, goal_node):
 Get most promising solution base from OPEN
 """
 def _min(OPEN):
-    bestnode = ""
+    bestnode = []
     val = 9999999999
 
-    for node in OPEN:
+    for index, node in OPEN:
         if node.getFval() < val:
-            bestnode = node
+            bestnode = [node, index]
             val = node.getFval()
 
     return bestnode

@@ -9,12 +9,12 @@ class Node:
     backpointer = ""
     depth = -1
     fVal = -1
+    h1 = 0
 
     def __init__(self, boardConfiguration, nullPointer, depth):
         self.setBoardConfiguration(boardConfiguration)
         self.setNullPosition(nullPointer)
         self.setDepth(depth)
-        self.f()
 
     def successors(self):
         successors = []
@@ -80,10 +80,21 @@ class Node:
     """
     Compute the f(n) function
     """
-    def f(self):
+    def f(self, g):
+        """
+        Implementatoin of h1(n)
+        """
+        misplaces = 0
 
+        for index, row in enumerate(self.getBoardConfiguration()):
+            for index2, value in enumerate(row):
+                if value != g[index][index2]:
+                    misplaces += 1
 
-        self.setFval(0)
+        self.h1 = misplaces
+
+        # Set fVal = h1 + depth
+        self.setFval(misplaces + self.getDepth())
 
     """
     Getter and Setter Methods
