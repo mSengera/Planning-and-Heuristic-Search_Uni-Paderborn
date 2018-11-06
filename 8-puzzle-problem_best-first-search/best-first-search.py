@@ -39,10 +39,25 @@ def _min(OPEN):
 
     for index, node in enumerate(OPEN):
         if node.getFval() < val:
-            bestnode = [node, index]
+            bestnode = [[node, index]]
             val = node.getFval()
+            arr = False
+        elif node.getFval() == val:
+            bestnode.append([node, index])
+            arr = True
 
-    return bestnode
+        if arr:
+            besth1 = 9999999999
+            _bestnode = []
+
+            for node in bestnode:
+                if node[0].h1 <= besth1:
+                    _bestnode = [node]
+                    besth1 = node[0].h1
+
+            bestnode = _bestnode
+
+    return bestnode[0]
 
 """
 Main Programm
