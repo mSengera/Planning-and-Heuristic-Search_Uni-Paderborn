@@ -9,3 +9,6 @@ A collection of code for Planning and Heuristic Search @ Uni Paderborn WS(2018/1
 
 ### matrix-col-sum_backtracking
 [![Functional?](https://img.shields.io/badge/Functional%3F-no-red.svg)](https://shields.io/)
+
+### 8-puzzles-problem_best-first-search
+[![Functional?](https://img.shields.io/badge/Functional%3F-no-red.svg)](https://shields.io/)
