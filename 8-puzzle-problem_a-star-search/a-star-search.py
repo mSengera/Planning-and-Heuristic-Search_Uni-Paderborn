@@ -59,8 +59,10 @@ def aStar(s, goal_node):
         CLOSED.append(n)
 
         for successor in n.successors():
-            successor.f(goal_node)
+            successor.f(goal_node)  # TODO: Store g, h and f value as variables in Node
             OPEN.append(successor)
+
+            # TODO: Add path discarding
 
     return False
 
