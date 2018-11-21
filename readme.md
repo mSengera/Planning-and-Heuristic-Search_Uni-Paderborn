@@ -10,6 +10,9 @@ A collection of code for Planning and Heuristic Search @ Uni Paderborn WS(2018/1
 ### 8-puzzles-problem_best-first-search
 [![Functional?](https://img.shields.io/badge/Functional%3F-yes-green.svg)](https://shields.io/)
 
+### 8-puzzles-problem_a-star-search
+[![Functional?](https://img.shields.io/badge/Functional%3F-yes-green.svg)](https://shields.io/)
+
 ---
 
 ### Playground
